@@ -702,13 +702,23 @@ Rotate Transition in foote Soical Icon
 }
 
 
-/* twitter SVG micro animation */
+/* whatsapp SVG micro animation */
 
-.twitter-icon-footer {
+.whatsapp-icon-footer {
   margin-bottom: 6px;
-  width: 35px;
+  width: 30px;
+  height: 30px;
+  color: #25d366;
 }
 
+.whatsapp:hover .whatsapp-icon-footer {
+  animation: whatsapp-pulse-footer 1.2s ease-in-out infinite;
+}
+
+@keyframes whatsapp-pulse-footer {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+}
 
 /* linkedin SVG micro animation */
 
@@ -716,16 +726,6 @@ Rotate Transition in foote Soical Icon
   margin-bottom: 8px;
   width: 30px;
 }
-
-
-/* instagram SVG micro animation */
-
-.instagram-icon-footer {
-  width: 70px;
-  padding-right: 24px;
-  padding-bottom: 8px;
-}
-
 
 /* github SVG Micro animation */
 

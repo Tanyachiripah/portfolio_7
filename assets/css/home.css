@@ -142,6 +142,32 @@ a.socialicon {
   transition: var(--trans-props);
 }
 
+.socialicon.whatsapp {
+  color: #25d366;
+}
+
+.socialicon.whatsapp:after {
+  background-color: #25d366;
+}
+
+.whatsapp-icon {
+  width: 26px;
+  height: 26px;
+  margin: auto;
+  z-index: 1;
+  transition: var(--trans-props);
+}
+
+.socialicon.whatsapp:hover .whatsapp-icon {
+  transform: scale(1.08);
+  animation: whatsapp-pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes whatsapp-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+}
+
 /* Social icon in dark mode */
 html[light-mode="dark"] .socialicon{
   background-color: #141516;
