@@ -651,9 +651,6 @@ blockquote {
     font-size: 131%;
   font-weight: bolder;
   }
-  .timelineHeading3{
-    font-size: 2.9ch;
-  }
 }
 
 @media (max-width: 991px){
@@ -671,10 +668,6 @@ blockquote {
   }
   .date2{
     padding: 0px;
-  }
-                                                     /* Third  */
-  .date3{
-    padding: 4px;
   }
   footer{
     width: revert;
@@ -736,28 +729,15 @@ blockquote {
     }
   }
   @media (max-width:453px){
-    .timelineHeading3{
-      font-size: 142%;
-    font-weight: bold;
-    }
     .timeline-content{
       font-size: 84%;
      }
   }
 
-  @media (max-width:440px){
-    .timelineHeading3{
-      font-size: 132%;
-    font-weight: bold;
-    }
-  }
   @media (max-width:432px){
    .timeline-content{
     font-size: 84%;
    }
-    .timelineHeading3{
-      font-size: 122%;
-    }
   }
  @media(max-width:378px){
   .container{
