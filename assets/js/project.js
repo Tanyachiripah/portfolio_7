@@ -7,7 +7,17 @@ const projectcards = document.querySelector(".projectcards");
 const projects = [
   {
     title: "Weather App",
-    cardImage: "assets/images/project-page/quiz.jpg",
+    cardImage:
+      "data:image/svg+xml;charset=UTF-8," +
+      encodeURIComponent(`
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+        <rect width="800" height="600" fill="#b8dff2"/>
+        <circle cx="560" cy="200" r="78" fill="#f4f7fb" opacity="0.8"/>
+        <g fill="#f9fbff">
+          <path d="M182 350c0-60 48-108 108-108 15 0 30 3 43 9 19-40 62-68 110-68 72 0 130 57 130 129 0 3 0 6 0 9 48 5 86 46 86 96 0 54-44 98-98 98H250c-70 0-126-56-126-126 0-60 43-110 101-123 0 0 0 0 0 0 0 0 0 0 0 0 0-2 0-5 0-7 0-55 45-101 101-101 43 0 81 27 95 66 15-7 31-11 48-11 62 0 112 50 112 112 0 9-1 17-3 25-1 0-1 0-2 0H182z"/>
+        </g>
+      </svg>
+      `),
     description: "A live weather dashboard that shows current conditions and forecasts.",
     tagimg: "https://cdn-icons-png.flaticon.com/512/1163/1163624.png",
     Previewlink: "https://weatherapp-red-seven-98.vercel.app/",
@@ -31,7 +41,42 @@ const projects = [
   },
   {
     title: "Clock",
-    cardImage: "assets/images/project-page/exercise.jpg",
+    cardImage:
+      "data:image/svg+xml;charset=UTF-8," +
+      encodeURIComponent(`
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+        <rect width="800" height="600" fill="#b8dff2"/>
+        <g transform="translate(400 300)">
+          <circle r="215" fill="#f5f5f5" stroke="#dfeaf1" stroke-width="12"/>
+          <circle r="180" fill="none" stroke="#dfeaf1" stroke-width="8"/>
+          <g stroke="#b9d7eb" stroke-width="10" stroke-linecap="round">
+            <line x1="0" y1="-185" x2="0" y2="-155"/>
+            <line x1="0" y1="185" x2="0" y2="155"/>
+            <line x1="-185" y1="0" x2="-155" y2="0"/>
+            <line x1="185" y1="0" x2="155" y2="0"/>
+            <line x1="-130" y1="-130" x2="-110" y2="-110"/>
+            <line x1="130" y1="-130" x2="110" y2="-110"/>
+            <line x1="-130" y1="130" x2="-110" y2="110"/>
+            <line x1="130" y1="130" x2="110" y2="110"/>
+            <line x1="-75" y1="-163" x2="-60" y2="-138"/>
+            <line x1="75" y1="-163" x2="60" y2="-138"/>
+            <line x1="-75" y1="163" x2="-60" y2="138"/>
+            <line x1="75" y1="163" x2="60" y2="138"/>
+          </g>
+          <g stroke="#d8e3ee" stroke-width="6" stroke-linecap="round">
+            <line x1="-135" y1="-135" x2="-120" y2="-120"/>
+            <line x1="135" y1="-135" x2="120" y2="-120"/>
+            <line x1="-135" y1="135" x2="-120" y2="120"/>
+            <line x1="135" y1="135" x2="120" y2="120"/>
+          </g>
+          <g>
+            <line x1="0" y1="0" x2="-65" y2="-95" stroke="#a9c8dc" stroke-width="10" stroke-linecap="round"/>
+            <line x1="0" y1="0" x2="90" y2="30" stroke="#b7d4ea" stroke-width="10" stroke-linecap="round"/>
+            <circle r="10" fill="#dfeaf1"/>
+          </g>
+        </g>
+      </svg>
+      `),
     description: "A sleek digital clock app with a clean interface.",
     tagimg: "https://cdn-icons-png.flaticon.com/512/2942/2942905.png",
     Previewlink: "https://clock-jet-seven.vercel.app/",
@@ -43,14 +88,6 @@ const projects = [
     description: "A stopwatch app built for timing tasks and workouts.",
     tagimg: "https://cdn-icons-png.flaticon.com/512/1077/1077035.png",
     Previewlink: "https://stopwatch-kappa-navy.vercel.app/",
-    Githublink: "",
-  },
-  {
-    title: "Poker Game",
-    cardImage: "assets/images/project-page/poker.jpg",
-    description: "Poker game built using typescript.",
-    tagimg: "https://miro.medium.com/max/816/1*mn6bOs7s6Qbao15PMNRyOA.png",
-    Previewlink: "",
     Githublink: "",
   },
   {
