@@ -24,9 +24,7 @@ let header = $(`
 <div class="collapse navbar-collapse " id="navbarSupportedContent">
   <ul class="navbar-nav ml-auto" id = "navbar-content">
    <li class="nav-item nav-item-hover"><a class="nav-link" href="index.html">Home</a></li>
-   <li class="nav-item nav-item-hover"><a class="nav-link" href="experience.html">Experience</a></li>
    <li class="nav-item nav-item-hover"><a class="nav-link" href="projects.html">Projects</a></li>
-   <li class="nav-item nav-item-hover"><a class="nav-link" href="research.html">Research</a></li>
    <li class="nav-item nav-item-hover"><a class="nav-link" href="education.html">Education</a></li>
    <li class="nav-item nav-item-hover"><a class="nav-link" href="techstack.html"">Skills</a></li>
    <li class="nav-item">
@@ -158,7 +156,7 @@ let footer = $(`
     
 
     <div class="rounded-social-buttons tag">
-    <a class="social-button linkedin" href="#" target="_blank" >
+    <a class="social-button linkedin" href="https://www.linkedin.com/in/tanyaradzwa-chiripa-6118183b1?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" >
       <svg class="linkedin-icon-footer" xmlns="http://www.w3.org/2000/svg" width="35" viewBox="0 0 24 24" fill="#0e76a8"
         stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
@@ -167,13 +165,13 @@ let footer = $(`
       </svg>
     </a>
 
-    <a class="social-button whatsapp" href="#" target="_blank" >
+    <a class="social-button whatsapp" href="https://wa.me/message/JXRC34PCJLVEG1" target="_blank" >
       <svg class="whatsapp-icon-footer" viewBox="0 0 448 512" aria-hidden="true">
         <path fill="currentColor" d="M380.9 97.1C347 63.2 291.3 45.1 233.3 45.1c-105.8 0-192 86.2-192 192 0 33.9 8.9 67.1 25.8 96.2L45.1 451.4a12.3 12.3 0 0 0 15.4 18.5l102.7-42.9c28.9 15.7 61.6 23.9 94.7 23.9h.1c105.8 0 192-86.2 192-192 0-58.2-25.3-111.4-68.1-146.4zM233.3 402.1c-29.8 0-58.9-8.1-84.2-23.4l-6.1-3.7-60.5 25.4 16.7-58.9-5.1-6.4c-17.2-27.3-26.2-58.8-26.2-91.2 0-91.5 74.5-166 166-166s166 74.5 166 166-74.5 166-166 166zm102.5-125.7c-5.6-2.8-33.1-16.3-38.2-18.1-5.1-1.8-8.8-2.7-12.5 2.8-3.7 5.6-14.3 18.1-17.5 21.8-3.2 3.7-6.4 4.2-12 1.4-5.6-2.8-23.6-8.7-45-27.7-16.7-14.9-28-33.3-31.2-38.9-3.2-5.6-.3-8.7 2.5-11.5 2.6-2.6 5.6-6.4 8.4-9.6 2.8-3.2 3.7-5.6 5.6-9.3 1.8-3.7 1-7-.5-9.6-1.4-2.7-12.5-30.2-17.1-41.3-4.5-10.8-9.1-9.3-12.5-9.5h-10.7c-3.7 0-9.8 1.4-14.9 7-5.1 5.6-19.4 18.9-19.4 46.1 0 27.2 19.9 53.6 22.7 57.3 2.8 3.7 39 59.5 94.5 83.4 13.2 5.7 23.6 9.1 31.7 11.7 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 33.1-13.5 37.7-26.6 4.6-13.1 4.6-24.3 3.2-26.6-1.3-2.3-5.1-3.7-10.7-6.5z"/>
       </svg>
     </a>
 
-    <a class="social-button github" href="#" target="_blank">
+    <a class="social-button github" href="https://github.com/Tanyachiripah" target="_blank">
     <svg class="github-icon-footer" width="45px" height="45px" viewBox="0 0 300 300">
         <path id="body" d="M112.5,234.4v43.1c24.5,7.5,50.5,7.5,75,0V225c-0.4-11.1-4.9-21.6-12.7-29.6c30-3.4,59.5-23.5,59.5-64.1
                                     c0.9-13.9-3.3-27.7-11.8-38.7c4.1-11.6,3.7-24.4-1.3-35.7c0,0-11.2-3.7-37.5,13.8c-22.1-6.1-45.3-6.1-67.4,0
