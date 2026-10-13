@@ -808,6 +808,12 @@ Contact Form In Footer
   margin-bottom: 4rem;
 }
 
+.form-header .email-address {
+  display: block;
+  margin-top: 0.75rem;
+  color: #bb86fc;
+}
+
 form {
   margin: 15px auto;
   color: #000;

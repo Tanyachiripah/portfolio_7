@@ -7,7 +7,7 @@ const projectcards = document.querySelector(".projectcards");
 const projects = [
   {
     title: "Weather App",
-    cardImage: "assets/images/project-page/quiz.jpg",
+    cardImage: "assets/images/Weather app icon_ blue.jpg",
     description: "A live weather dashboard that shows current conditions and forecasts.",
     tagimg: "https://cdn-icons-png.flaticon.com/512/1163/1163624.png",
     Previewlink: "https://weatherapp-red-seven-98.vercel.app/",
@@ -23,7 +23,7 @@ const projects = [
   },
   {
     title: "Calculator",
-    cardImage: "assets/images/project-page/flappybird.png",
+    cardImage: "assets/images/Calculator app icon.jpg",
     description: "A simple calculator app for everyday arithmetic tasks.",
     tagimg: "https://cdn-icons-png.flaticon.com/512/337/337946.png",
     Previewlink: "https://calculator-one-psi-96.vercel.app/",
@@ -31,7 +31,7 @@ const projects = [
   },
   {
     title: "Clock",
-    cardImage: "assets/images/project-page/exercise.jpg",
+    cardImage: "assets/images/Clock.jpg",
     description: "A sleek digital clock app with a clean interface.",
     tagimg: "https://cdn-icons-png.flaticon.com/512/2942/2942905.png",
     Previewlink: "https://clock-jet-seven.vercel.app/",
@@ -39,7 +39,7 @@ const projects = [
   },
   {
     title: "Stopwatch",
-    cardImage: "assets/images/project-page/recipe.jpg",
+    cardImage: "assets/images/stopwatch.jpg",
     description: "A stopwatch app built for timing tasks and workouts.",
     tagimg: "https://cdn-icons-png.flaticon.com/512/1077/1077035.png",
     Previewlink: "https://stopwatch-kappa-navy.vercel.app/",
@@ -53,7 +53,7 @@ const showCards = () => {
   projects.forEach(({ title, cardImage, Previewlink, Githublink }) => {
     output += `       
         <div class="column skill-card card" style="margin: 15px"data-aos="zoom-in-up" data-aos-easing="linear" data-aos-delay="300" data-aos-duration="600" >
-          <div class="wrapper" style="background: url(${cardImage}) center / cover no-repeat;">
+          <div class="wrapper" style="background: url('${cardImage}') center / cover no-repeat;">
             <div class="header">
             </div>
             <div class="data">

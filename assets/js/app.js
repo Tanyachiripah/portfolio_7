@@ -135,16 +135,18 @@ let footer = $(`
           <div class="form-style-6">
              <div class="form-header">
                 <h6 class="display">Get in Touch</h6>
+                <p class="email-address">tanychiripah@gmail.com</p>
               </div>
-                <form name="form1" action="#" method="POST" accept-charset="UTF-8" >
+                <form name="form1" action="/api/contact" method="POST" accept-charset="UTF-8" >
                   <input id="name" type="text" name="name" placeholder="Your Name" required/>
                   <input id="email" type="email" name="email" placeholder="Email Address" required/>                  
                   <textarea id="textArea" name="message" placeholder="Type your Message" required></textarea>
-              
+
                   <div id="main">
-                    <button id="lnch" type="button" value="Send" >Send</button>
+                    <button id="lnch" type="submit" value="Send" >Send</button>
                     <div id="lnch_btn"><i class="fas fa-space-shuttle"></i></div>
                   </div>
+                  <p id="contactStatus" role="status" aria-live="polite"></p>
                 </form>
               </div>
             </div>
@@ -362,46 +364,53 @@ $(window).on("load", function () {
   $(".loader-container").fadeOut(2500);
 });
 
-//send button animation
-
-
+// Send contact form messages through the same-origin Vercel function.
 $(function submitAnimation() {
-  const name = document.querySelector("#name")
-  const emailAdress = document.querySelector("#email")
-  const text = document.querySelector("#textArea")
-  const emailPattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+  const form = document.querySelector('form[name="form1"]');
+  const submitButton = document.querySelector("#lnch");
+  const rocket = document.querySelector("#lnch_btn");
+  const status = document.querySelector("#contactStatus");
 
-  $("#lnch").on("click", function () {
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
 
-    // Check if the name field is empty or contains a number
-    if (name.value == "" || (/\d/.test(name.value))) {
-      swal("Error !","Please enter a valid name !","error");
-      return;
-    }
-    // Check if the email field is empty or email is not valid ex: test@@email.com
-    else if (emailAdress.value == "" || !(emailPattern.test(emailAdress.value))) {
-      swal("Error !","Please enter a valid email !","error");
-      return;
-    }
-    // Check if the message field is empty
-    else if (text.value == "") {
-      swal("Error !","Please enter a valid message !","error");
-      return;
-    }
-    else {
+    const formData = new FormData(form);
+    const payload = Object.fromEntries(formData.entries());
+    submitButton.disabled = true;
+    submitButton.classList.remove("launched");
+    rocket.classList.remove("launched");
+    submitButton.classList.add("launching");
+    rocket.classList.add("launching");
+    submitButton.textContent = "Sending";
+    status.textContent = "Sending your message...";
 
-      setTimeout(function () {
-        $("#lnch").addClass("launching").text("Sending");
-        $("#lnch_btn").addClass("launching");
-      }, 0);
-      setTimeout(function () {
-        $("#lnch").addClass("launched").text("SENT");
-        $("#lnch_btn").addClass("launched");
-      }, 1500);
-      // Wait for 2.2 seconds so that the send button animation can be fully played before submitting the form
-      setTimeout(() => {
-        document.querySelector('form').submit();
-      }, 2200);
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Your message couldn't be sent. Please try again.");
+      }
+
+      form.reset();
+      submitButton.classList.remove("launching");
+      rocket.classList.remove("launching");
+      submitButton.classList.add("launched");
+      rocket.classList.add("launched");
+      submitButton.textContent = "Sent";
+      status.textContent = "Thanks! Your message has been sent.";
+    } catch (error) {
+      console.error("Contact form submission failed:", error);
+      submitButton.classList.remove("launching");
+      rocket.classList.remove("launching");
+      submitButton.textContent = "Send";
+      status.textContent = error.message || "Your message couldn't be sent. Please try again.";
+    } finally {
+      submitButton.disabled = false;
     }
   });
 });

@@ -26,6 +26,16 @@ Before you begin, ensure you have met the following requirements:
 
 * [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
 
+## Contact form (Vercel + Resend)
+
+The contact form sends messages through the Vercel serverless function in `api/contact.js`. Configure these environment variables in the Vercel project settings for each deployment environment:
+
+* `RESEND_API_KEY`: a Resend API key. Keep it in Vercel; never add it to client-side code or commit it.
+* `RESEND_FROM_EMAIL`: a sender address on a domain verified with Resend, for example `Portfolio <contact@your-verified-domain.com>`.
+* `CONTACT_EMAIL`: the inbox that receives messages, for example `tanychiripah@gmail.com`.
+
+Add the variables in Vercel's project settings and redeploy. The form displays success only after Resend accepts the message; configuration, validation, and delivery errors are shown to the visitor.
+
 ## Installing Portfolio
 
 To install, follow these steps:
